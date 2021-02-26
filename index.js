@@ -57,7 +57,11 @@ const zooAnimals = [
   */
 
   function animalNames(array){
-    return array.forEach(item => item.animal_name, item.scientific_name)
+    const displayNames = [];
+    array.forEach(function(item){
+      return displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`)
+    })
+    return displayNames
   }
   
 
@@ -221,7 +225,7 @@ console.log(cuboidTwo.surfaceArea()); // 130
 
 // 🦄 💪 Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area. 🦄 💪
   
-
+// class CubeMaker extends CubeMaker
 
 
 
